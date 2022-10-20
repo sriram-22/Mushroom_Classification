@@ -1,0 +1,114 @@
+.content {
+    padding-top: 5px;
+    margin-top: -30px;
+    margin-left: -40px;
+    margin-right: -30px;
+    padding-left: -200px;
+    background-image: url(https://wallpapercrafter.com/desktop/13754-mushrooms-toadstools-glow-photoshop-4k.jpg);
+    background-size: cover;
+    height: 100 vh;
+    text-align: center;
+}
+.main-heading {
+    padding: 2px;
+    margin-top: 40px;   
+    margin-bottom: -30px;
+    margin-left: 380px;
+    margin-right: 350px;    
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    background-color: rgba(0,0,0, 0.5);
+    border: 2px solid rgb(35, 193, 227) ;
+    color:  rgb(35, 193, 227);
+    font-family: Georgia, serif;
+    border-radius: 5px;
+}
+
+.para {
+    color: white;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: -60px;
+}
+
+.Input{
+    height:30px;
+    width:140px;
+    margin-left:10px;
+    margin-right: 100px;
+    border:2px;
+    margin-bottom:5px;
+    background: transparent;
+    border-radius: 5px;
+    border-bottom:1px solid rgb(35, 193, 227);
+    font-size:19px;
+    padding-left:8px;
+    color: white;
+    
+    }
+
+.Input:hover{
+    height:30px;
+    width:140px;
+    margin-left:10px;
+    margin-right: 100px;
+    border:2px;
+    margin-bottom:5px;
+    background:white;
+    border-radius: 5px ;
+    border-bottom:1px solid rgb(35, 193, 227);
+    font-size:19px;
+    padding-left:8px;
+    color: rgb(43, 45, 48);
+    
+    }
+
+.flex-container {
+    text-align: left;
+    padding: -30px;
+    display: flex;
+    margin-bottom: -170px;
+}
+
+
+.flex-child {
+    padding: 30px;
+    padding-right: -100px;
+    margin: 210px;
+    margin-top: 100px; 
+    flex: 1;
+    border: 2px solid rgb(17, 183, 243);
+    border-radius: 15px;
+    background-color: rgba(0,0,0, 0.5);
+}  
+
+.flex-child:first-child {
+    margin-left: 220px;
+    margin-right: -150px;
+}
+
+
+
+
+.pred-btn{
+    text-align:center;
+    height:60px;
+    width:150px;
+    margin-left:20px;
+    font-size:25px;
+    color:rgb(17, 183, 243);
+    margin-top:10px;
+    border:2px solid black;
+    border-radius:30px;
+    
+    
+    }
+
+.pred-btn:hover{
+    color:rgb(17, 183, 243);
+    border:2px solid rgb(35, 193, 227);
+    }
+
+.result {
+    color: beige;
+}

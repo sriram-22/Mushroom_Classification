@@ -1,1 +1,164 @@
-<h1>This is a test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+<div class="content d-flex flex-row justify-content-center">
+  <h1 class="main-heading">MUSHROOM CLASSIFICATION</h1>
+  <P class="para">Let's find out if your mushroom is edible or not.</P>
+    <form action="{{url_for('predict')}}" method="post">
+      <div class="flex-container" style="color: white;">
+        <div class="flex-child">
+        <label for="comp_select1">Cap Shape:</label>
+        <select name="comp_select1" class="Input" >
+              {% for o in F1 %}
+              <option value="{{ o.map }}">{{ o.cap_shape }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select2">Cap Surface:</label>
+        <select name="comp_select2" class="Input">
+              {% for o in F2 %}
+              <option value="{{ o.map }}">{{ o.cap_surface }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select3">Cap Color:</label>
+        <select name="comp_select3" class="Input">
+              {% for o in F3 %}
+              <option value="{{ o.map }}">{{ o.cap_color }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select4">Bruises:</label>
+        <select name="comp_select4" class="Input">
+              {% for o in F4 %}
+              <option value="{{ o.map }}">{{ o.bruises }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select5">Odor:</label>
+        <select name="comp_select5" class="Input">
+              {% for o in F5 %}
+              <option value="{{ o.map }}">{{ o.odor }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select6">Gill Attachment:</label>
+        <select name="comp_select6" class="Input">
+              {% for o in F6 %}
+              <option value="{{ o.map }}">{{ o.gill_attachment }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select7">Gill Spacing:</label>
+        <select name="comp_select7" class="Input">
+              {% for o in F7 %}
+              <option value="{{ o.map }}">{{ o.gill_spacing }}</option>
+              {% endfor %}
+            </select><br>
+        <label for="comp_select8">Gill Size:</label>
+        <select name="comp_select8" class="Input">
+              {% for o in F8 %}
+              <option value="{{ o.map }}">{{ o.gill_size }}</option>
+              {% endfor %}
+            </select><br>
+            <label for="comp_select9">Gill Color:</label>
+            <select name="comp_select9" class="Input">
+                {% for o in F9 %}
+                <option value="{{ o.map }}">{{ o.gill_color }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select10">Stalk Shape:</label>
+          <select name="comp_select10" class="Input">
+                {% for o in F10 %}
+                <option value="{{ o.map }}">{{ o.stalk_shape }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select11">Stalk Root:</label>
+          <select name="comp_select11" class="Input">
+                {% for o in F11 %}
+                <option value="{{ o.map }}">{{ o.stalk_root }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="flex-child">
+          <label for="comp_select12">Stalk Surface Above Ring:</label>
+          <select name="comp_select12" class="Input">
+                {% for o in F12 %}
+                <option value="{{ o.map }}">{{ o.stalk_surface_above_ring }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select13">Stalk Surface Below Ring:</label>
+          <select name="comp_select13" class="Input">
+                {% for o in F13 %}
+                <option value="{{ o.map }}">{{ o.stalk_surface_below_ring }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select14">Stalk Color Above Ring:</label>
+          <select name="comp_select14" class="Input">
+                {% for o in F14 %}
+                <option value="{{ o.map }}">{{ o.stalk_color_above_ring }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select15">Stalk Color Below Ring:</label>
+          <select name="comp_select15" class="Input">
+                {% for o in F15 %}
+                <option value="{{ o.map }}">{{ o.stalk_color_below_ring }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select16">Veil Type:</label>
+          <select name="comp_select16" class="Input">
+                {% for o in F16 %}
+                <option value="{{ o.map }}">{{ o.veil_type }}</option>
+                {% endfor %}
+              </select><br>
+              <label for="comp_select17">Veil Color:</label>
+              <select name="comp_select17" class="Input">
+                {% for o in F17 %}
+                <option value="{{ o.map }}">{{ o.veil_color }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select18">Ring Number:</label>
+          <select name="comp_select18" class="Input">
+                {% for o in F18 %}
+                <option value="{{ o.map }}">{{ o.ring_number }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select19">Ring Type:</label>
+          <select name="comp_select19" class="Input">
+                {% for o in F19 %}
+                <option value="{{ o.map }}">{{ o.ring_type }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select20">Spore Print Color:</label>
+          <select name="comp_select20" class="Input">
+                {% for o in F20 %}
+                <option value="{{ o.map }}">{{ o.spore_print_color }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select21">Population:</label>
+          <select name="comp_select21" class="Input">
+                {% for o in F21 %}
+                <option value="{{ o.map }}">{{ o.population }}</option>
+                {% endfor %}
+              </select><br>
+          <label for="comp_select22">Habitat:</label>
+          <select name="comp_select22" class="Input">
+                {% for o in F22 %}
+                <option value="{{ o.map }}">{{ o.habitat }}</option>
+                {% endfor %}
+              </select><br>
+            </div>
+      </div>    
+    
+        <button type="submit" class="pred-btn"> Predict </button>
+
+</form>
+<div class="result">
+    <h3>{{ prediction }}</h3><br><br><br><br><br><br><br>
+</div>
+</div>
+
+</body>
+</html>
